@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+ul {
+  display: flex; /*横並びにするには親要素が必要*/
+
+  justify-content: flex-start; /* 左右、中央center寄せ space-between均等割り　displayとセット */
+  align-items: flex-end; /* 上下揃え 　displayとセット*/
+
+  list-style: none;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+ul li {
+  padding: 0 20px;
+}
