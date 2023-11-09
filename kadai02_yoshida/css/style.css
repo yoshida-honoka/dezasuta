@@ -2,6 +2,7 @@
 
 .class-1 {
   max-width: 960px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -14,6 +15,7 @@
 
 .class-2 {
   max-width: 960px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -44,7 +46,6 @@ ul {
 
 ul li {
   font-weight: 500;
-  list-style: none;
   padding: 10px 25px;
   border-right: 2px solid #333;
 }
