@@ -6,7 +6,6 @@ body {
 
 .service {
   max-width: 960px;
-  height: 100%;
   margin: 0 auto;
 }
 
@@ -19,9 +18,7 @@ h1 {
 .service-list {
   display: flex;
   list-style: none;
-  max-width: 880px;
   padding: 0;
-  margin: 0 40px;
 }
 
 .service-list li {
@@ -36,32 +33,27 @@ h1 {
 
 .service-list img {
   width: 100%;
-  height: 180px;
 }
 
-.service-description {
+.service-desc {
   padding: 10px 10px 15px 10px;
 }
 
-.service-description h2 {
+.service-desc h2 {
   color: mediumseagreen;
   border-left: 10px solid mediumseagreen;
   padding-left: 10px;
   margin-bottom: 10px;
 }
 
-.service-description p {
-  line-height: 1.5rem;
+.service-desc p {
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 400px) {
   .service-list {
     display: block;
     margin: 0 20px;
-  }
-
-  .service-list img {
-    height: 200px;
   }
 
   .service-list li {
