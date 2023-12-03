@@ -1,13 +1,5 @@
 @charset "utf-8";
 
-.pc {
-  display: block;
-}
-
-.sp {
-  display: none;
-}
-
 .header_wrap {
   position: absolute;
   top: 0;
@@ -40,20 +32,11 @@
 }
 
 .sp_nav,
-.nav_btn {
+.sp_btn {
   display: none;
 }
 
 @media screen and (max-width: 767px) {
-  .pc {
-    display: none;
-  }
-
-  .sp {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
   .header_logo {
     width: 187px;
   }
@@ -67,66 +50,87 @@
   .pc_nav {
     display: none;
   }
-
-  .nav_btn {
-    display: block;
+  /* ハンバーガー */
+  .sp_btn {
     position: absolute;
     top: 20px;
     right: 25px;
+    display: block;
     height: 23px;
-    z-index: 2;
     cursor: pointer;
+    z-index: 2;
   }
 
-  .nav_btn span {
-    display: block;
+  .sp_btn span {
     position: relative;
     top: 10px;
+    display: block;
     width: 33px;
     height: 3px;
     border-radius: 2px;
     background-color: #fff;
+    transition: 0.3s;
   }
 
-  .nav_btn span::after {
+  .sp_btn span::after,
+  .sp_btn span::before {
+    position: absolute;
     content: "";
     display: block;
-    position: absolute;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+
+  .sp_btn span::before {
     bottom: 10px;
-    width: 33px;
-    height: 3px;
-    border-radius: 2px;
-    background-color: #fff;
   }
 
-  .nav_btn span::before {
-    content: "";
-    display: block;
-    position: absolute;
+  .sp_btn span::after {
     top: 10px;
-    width: 33px;
-    height: 3px;
-    border-radius: 2px;
-    background-color: #fff;
   }
 
+  /* ハンバーガー閉じ */
+  .sp_btn.open span {
+    background: transparent;
+  }
+
+  .sp_btn.open span::before {
+    bottom: 0px;
+    transform: rotate(45deg);
+  }
+
+  .sp_btn.open span::after {
+    top: 0px;
+    transform: rotate(135deg);
+  }
+
+  /* ハンバーガーメニュー */
   .sp_nav {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1;
-    opacity: 0;
+  }
+
+  .sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 
   .sp_nav ul li {
+    padding: 20px;
     color: #fff;
-    line-height: 400%;
-    display: flex;
-    justify-content: center;
+    font-size: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   }
 }
 
@@ -134,6 +138,7 @@ main {
   background-color: #e8d9bf;
 }
 
+/* リード文 */
 .lead {
   max-width: 1000px;
   margin: 0 auto;
@@ -155,14 +160,29 @@ main {
   padding-bottom: 40px;
 }
 
+.lead p:nth-child(2) {
+  letter-spacing: 0.1em;
+}
+
 .lead p:last-child {
   font-size: 23px;
   line-height: 1.6;
   padding-bottom: 100px;
+  letter-spacing: 0.1em;
 }
 
 .sp_br {
   display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .lead p:nth-child(2) {
+    font-size: 68px;
+  }
+
+  .lead p:last-child {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -171,9 +191,10 @@ main {
     padding: 40px 0px 28px 0px;
   }
 
-  .lead p {
+  .lead p:nth-child(2) {
     font-size: 38px;
     padding-bottom: 26px;
+    letter-spacing: -0.05em;
   }
 
   .lead p:last-child {
@@ -187,7 +208,8 @@ main {
   }
 }
 
-.ABOUT {
+/* ABOUT　US */
+.about {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -196,48 +218,58 @@ main {
   padding: 0 10px;
 }
 
-.ABOUT img {
-  border-bottom-right-radius: 82px;
+.about_img {
   width: 50%;
+}
+
+.about_img img {
+  border-bottom-right-radius: 82px;
 }
 
 .about_sp {
   display: none;
 }
 
-.ABOUT div {
+.about_text {
   width: 41%;
   padding: 0px 10px 0px 10px;
 }
 
-.ABOUT h2 {
+.about_text h2 {
   width: 272px;
-  margin: 68px 0px 56px 0px;
+  margin: 68px 0px 42px 0px;
 }
 
-.ABOUT h2 img {
+.about_text h2 img {
   width: 100%;
 }
 
-.ABOUT p {
+.about_text p {
   font-size: 44px;
+  line-height: 1.3;
 }
 
-.ABOUT p:last-child {
+.about_text p:last-child {
   font-size: 16px;
   line-height: 1.6;
-  margin-top: 38px;
+  margin-top: 19px;
+}
+
+@media screen and (max-width: 1100px) {
+  .about_text p {
+    font-size: 38px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .ABOUT {
+  .about {
     display: block;
     width: 100%;
     margin: 0 auto;
     padding: 0px;
   }
 
-  .ABOUT h2 {
+  .about h2 {
     width: 160px;
     margin: 70px auto 18px auto;
   }
@@ -250,162 +282,167 @@ main {
     display: block;
   }
 
-  .ABOUT div {
+  .about div {
     width: 100%;
     padding: 0px;
   }
 
-  .ABOUT img {
+  .about_img {
     border-bottom-right-radius: 0px;
     width: 100%;
   }
 
-  .ABOUT p {
+  .about p {
     font-size: 36px;
     line-height: 1.2;
-    padding: 37px 0px 0px 21px;
+    padding: 27px 0px 0px 21px;
   }
 
-  .ABOUT p:last-child {
+  .about p:last-child {
     padding: 0px 20px;
-    margin-top: 33px;
+    margin-top: 23px;
   }
 }
 
-.MENU {
+/* MENU */
+.menu {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-.MENU h2 {
+.menu h2 {
   width: 151px;
   margin: 0 auto;
   padding: 108px 0px 48px 0px;
 }
 
-.MENU h2 img {
+.menu h2 img {
   width: 100%;
 }
 
-.MENU_wrap {
+.menu_wrap {
   display: flex;
   justify-content: space-between;
 }
 
-.MENU_wrap div {
+.menu_wrap li {
   width: 30%;
 }
 
-.MENU_wrap div img {
+.menu_wrap li img {
   border-top-right-radius: 41px;
 }
 
-.MENU_wrap div h3 {
+.menu_wrap li h3 {
   color: #d30202;
   font-size: 38px;
-  margin: -10px 0px 25px 10px;
+  margin: -10px 0px 18px 10px;
+  font-weight: normal;
 }
 
-.MENU_wrap div p {
+.menu_wrap li p {
   font-size: 17px;
   line-height: 1.4;
 }
 
 @media screen and (max-width: 767px) {
-  .MENU {
+  .menu {
     padding: 0 38px;
   }
 
-  .MENU h2 {
+  .menu h2 {
     width: 87px;
     margin: 0 auto;
     padding: 56px 0px 22px 0px;
   }
 
-  .MENU_wrap {
+  .menu_wrap {
     display: block;
   }
 
-  .MENU_wrap div {
+  .menu_wrap li {
     margin: 0 auto;
     width: 100%;
   }
 
-  .MENU_wrap div img {
+  .menu_wrap li img {
     width: 100%;
   }
 
-  .MENU_wrap div h3 {
+  .menu_wrap li h3 {
     font-size: 40px;
     margin-bottom: 32px;
   }
 
-  .MENU_wrap div p {
+  .menu_wrap li p {
     margin-bottom: 60px;
   }
 }
 
-.GALLERY h2 {
+/* GALLERY */
+.gallery h2 {
   width: 245px;
   margin: 0 auto;
   padding: 100px 0px 26px 0px;
 }
 
-.GALLERY h2 img {
+.gallery h2 img {
   width: 100%;
 }
 
-.GALLERY_wrap {
+.gallery_wrap {
   display: flex;
   justify-content: space-around;
   overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
-  .GALLERY h2 {
+  .gallery h2 {
     width: 142px;
     padding: 35px 0px 21px 0px;
   }
 }
-.EVENT {
+
+/* EVENT */
+.event {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-.EVENT h2 {
+.event h2 {
   width: 173px;
   margin: 0 auto;
   padding: 72px 0px 40px 0px;
 }
 
-.EVENT h2 img {
+.event h2 img {
   width: 100%;
 }
 
-.EVENT_background {
+.event_wrap {
   background-color: #fff;
   border: 3px solid #333;
   padding: 36px;
 }
 
-.EVENT_background ul li {
+.event_wrap ul li {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
   font-size: 23px;
 }
 
-.EVENT_background ul li:last-child {
+.event_wrap ul li:last-child {
   margin-bottom: 0px;
 }
 
-.EVENT_background ul li time {
+.event_wrap ul li time {
   margin-right: 48px;
 }
 
-.EVENT_background ul li a {
+.event_wrap ul li a {
   display: inline-block;
   overflow: hidden;
   width: 510px;
@@ -415,49 +452,52 @@ main {
 }
 
 @media screen and (max-width: 767px) {
-  .EVENT {
+  .event {
     padding: 0 20px;
   }
 
-  .EVENT h2 {
+  .event h2 {
     width: 100px;
     padding: 34px 0px 21px 0px;
   }
 
-  .EVENT_background ul li {
+  .event_wrap ul li {
     display: block;
     margin-bottom: 27px;
     font-size: 16px;
   }
 
-  .EVENT_background ul li a {
+  .event_wrap ul li a {
     display: block;
     width: 100%;
   }
 }
 
-.ACCESS h2 {
+/* ACCESS */
+.access h2 {
   width: 213px;
   margin: 0 auto;
   padding: 80px 0px 46px 0px;
 }
 
-.ACCESS h2 img {
+.access h2 img {
   width: 100%;
 }
 
-.ACCESS_map iframe {
+.access_map iframe {
   width: 100%;
   height: 470px;
+  display: block;
 }
 
 @media screen and (max-width: 767px) {
-  .ACCESS h2 {
+  .access h2 {
     width: 124px;
     padding: 33px 0px 9px 0px;
   }
 }
 
+/* フッター */
 footer {
   max-width: 1000px;
   margin: 0 auto;
@@ -479,10 +519,11 @@ footer h2 img {
   padding-top: 82px;
 }
 
-.footer_wrap div p {
+.footer_wrap p {
   font-size: 20px;
   line-height: 1.9;
   margin-bottom: 83px;
+  color: #333;
 }
 
 .copyright {
@@ -492,6 +533,7 @@ footer h2 img {
 
 .copyright small {
   font-size: 16px;
+  color: #333;
 }
 
 @media screen and (max-width: 767px) {
@@ -508,7 +550,7 @@ footer h2 img {
     margin: 0px 0px 35px 0px;
   }
 
-  .footer_wrap div p {
+  .footer_wrap p {
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 45px;
@@ -519,6 +561,7 @@ footer h2 img {
   }
 }
 
+/* トップボタン */
 .btn img {
   width: 125px;
   height: 125px;
