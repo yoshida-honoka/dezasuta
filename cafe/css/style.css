@@ -142,7 +142,6 @@ main {
 .lead {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 .lead p {
@@ -193,14 +192,14 @@ main {
 
   .lead p:nth-child(2) {
     font-size: 38px;
-    padding-bottom: 26px;
-    letter-spacing: -0.05em;
+    padding-bottom: 17px;
+    letter-spacing: 0;
   }
 
   .lead p:last-child {
     font-size: 16px;
     line-height: 1.8;
-    padding-bottom: 65px;
+    padding-bottom: 0px;
   }
 
   .sp_br {
@@ -215,7 +214,6 @@ main {
   justify-content: space-between;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 .about_img {
@@ -271,7 +269,7 @@ main {
 
   .about h2 {
     width: 160px;
-    margin: 70px auto 18px auto;
+    margin: 65px auto 18px auto;
   }
 
   .about_pc {
@@ -343,7 +341,7 @@ main {
 
 .menu_wrap li p {
   font-size: 17px;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 @media screen and (max-width: 767px) {
@@ -372,7 +370,7 @@ main {
 
   .menu_wrap li h3 {
     font-size: 40px;
-    margin-bottom: 32px;
+    margin-bottom: 21px;
   }
 
   .menu_wrap li p {
@@ -461,6 +459,10 @@ main {
     padding: 34px 0px 21px 0px;
   }
 
+  .event_wrap {
+    padding: 20px 25px;
+  }
+
   .event_wrap ul li {
     display: block;
     margin-bottom: 27px;
@@ -494,6 +496,10 @@ main {
   .access h2 {
     width: 124px;
     padding: 33px 0px 9px 0px;
+  }
+
+  .access_map iframe {
+    height: 190px;
   }
 }
 
@@ -547,7 +553,7 @@ footer h2 img {
   }
 
   footer h2 {
-    margin: 0px 0px 35px 0px;
+    margin: 0px 0px 24px 0px;
   }
 
   .footer_wrap p {
@@ -575,6 +581,6 @@ footer h2 img {
     width: 100px;
     height: 100px;
     right: 12px;
-    bottom: 205px;
+    bottom: 12px;
   }
 }
