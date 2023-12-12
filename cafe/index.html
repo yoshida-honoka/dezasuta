@@ -7,17 +7,30 @@
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです。">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link href="css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
     <header id="header">
         <div class="header_slider">
-            <picture>
-                <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
-                <img class="pc" src="images/pc_first-100.jpg" alt="店内の様子">
-            </picture>
+            <div>
+                <picture>
+                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
+                    <img class="pc" src="images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width: 767px)">
+                    <img class="pc" src="images/slider_2.jpg" alt="店内の様子">
+                </picture>
+            </div>
         </div>
         <div class="header_wrap">
             <h1 class="header_logo"><a href=""><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></a>
@@ -91,13 +104,18 @@
         <section id="gallery" class="gallery">
             <h2><img src="images/gallery@2x.png" alt="gallery"></h2>
             <div class="gallery_wrap">
-                <img src="images/pc_gallary_01-100.jpg" alt="コーヒー">
-                <img src="images/pc_gallary_02-100.jpg" alt="店内の写真１">
-                <img src="images/pc_gallary_03-100.jpg" alt="店内の写真２">
-                <img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆">
-                <img src="images/pc_gallary_05-100.jpg" alt="店内の写真３">
-
-
+                <a href="images/pc_gallary_01-100.jpg" data-lightbox="group"><img src="images/pc_gallary_01-100.jpg"
+                        alt="コーヒー"></a>
+                <a href="images/pc_gallary_02-100.jpg" data-lightbox="group"><img src="images/pc_gallary_02-100.jpg"
+                        alt="店内の写真１"></a>
+                <a href="images/pc_gallary_03-100.jpg" data-lightbox="group"><img src="images/pc_gallary_03-100.jpg"
+                        alt="店内の写真２"></a>
+                <a href="images/pc_gallary_04-100.jpg" data-lightbox="group"><img src="images/pc_gallary_04-100.jpg"
+                        alt="コーヒー豆"></a>
+                <a href="images/pc_gallary_05-100.jpg" data-lightbox="group"><img src="images/pc_gallary_05-100.jpg"
+                        alt="店内の写真３"></a>
+                <a href="images/pc_gallary_01-100.jpg" data-lightbox="group"><img src="images/pc_gallary_01-100.jpg"
+                        alt="コーヒー"></a>
             </div>
         </section>
 
@@ -151,8 +169,32 @@
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open')
             });
-        }); 
+
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+            });
+
+            $('.gallery_wrap').slick({
+                autoplay: true,
+                autoplaySpeed: 5000,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+
+                    }]
+            })
+        });
     </script>
+    <script src="js/lightbox.js"></script>
 </body>
 
 </html>

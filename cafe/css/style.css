@@ -36,6 +36,20 @@
   display: none;
 }
 
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+  color: #fff;
+  font-size: 14px;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
 @media screen and (max-width: 767px) {
   .header_logo {
     width: 187px;
@@ -400,6 +414,40 @@ main {
     width: 142px;
     padding: 35px 0px 21px 0px;
   }
+}
+
+.slick-prev {
+  left: 25px;
+  z-index: 1;
+}
+
+.slick-prev:before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(225deg);
+}
+
+.slick-next {
+  right: 25px;
+  z-index: 1;
+}
+
+.slick-next:before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.lb-data .lb-number {
+  display: none !important;
 }
 
 /* EVENT */
