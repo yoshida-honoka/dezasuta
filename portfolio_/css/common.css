@@ -20,7 +20,8 @@ li {
   line-height: 1;
   /*デフォルトの文字色、font-familyを予め当てておく*/
   color: #333333;
-  font-family: "honoka-maru-gothic", sans-serif;
+  font-family: "Honoka-Maru-Gothic", " honoka-maru-gothic", "Honoka Maru Gothic",
+    "honoka maru gothic", "FOT-TsukuARdGothic Std", "fot tsukubrdgothic-std";
   font-weight: 400;
   font-style: normal;
   font-feature-settings: "palt";
@@ -28,6 +29,7 @@ li {
 
 html {
   scroll-behavior: smooth;
+  background-color: #f9ecd9;
 }
 
 a {
@@ -51,4 +53,11 @@ img {
   max-width: 100%;
   vertical-align: bottom;
   border: none;
+}
+
+h1 {
+  font-family: "santelia rough two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
 }

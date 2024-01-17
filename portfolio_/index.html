@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mokumoku design</title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         (function (d) {
             var config = {
@@ -18,9 +22,142 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
+    <header>
+        <div class="header_wrap">
+            <div class="header_logo"><a href="">
+                    <picture>
+                        <source srcset="images/logo_sp@2x.png" media="(max-width: 767px)"><img
+                            src="images/logo_pc@2x.png" alt="mokumoku design">
+                    </picture>
+                </a>
+            </div>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="main_visual">
+            <div class="main_logo"><img src="images/main@2x.png" alt="ロゴ"></div>
+            <div class="scroll"><img src="images/scroll@2x.png" alt="↓"></div>
+        </div>
+
+        <section class="concept">
+            <div class="concept_heading">
+                <h1>Concept</h1>
+                <p>コンセプト</p>
+            </div>
+
+            <div class="concept_text1">
+                <p>もっとかっこいいデザインのサイトにしたい……</p>
+            </div>
+            <div class="concept_text2">
+                <p>お客様の目を引く広告を作りたい……</p>
+            </div>
+            <div class="concept_text3">
+                <p>心の中の、もくもくとした吹き出しに入っているイメージを、<br>
+                    目に見える形で、多くの人に伝わるように、形にすること。<br>
+                    それが私の仕事です。</p>
+            </div>
+
+            <div class="more_btn"><a href="">もっと見る</a></div>
+        </section>
+
+        <section class="service">
+            <div class="service_heading">
+                <h1>Service</h1>
+                <p>サービス</p>
+            </div>
+
+            <div class="service_design">
+                <img src="images/Service_design@2x.png" alt="デザイン">
+                <h2>デザイン</h2>
+                <p>illustrator、photoshopを使用し、お客様の思い描く<br>
+                    イメージを表現いたします。そのためにお客様のイメージ<br>
+                    を丁寧にヒアリングし、理想のデザインを共に目指してい<br>
+                    きます。</p>
+            </div>
+            <div class="service_cording">
+                <img src="images/Service_cording@2x.png" alt="コーディング">
+                <h2>コーディング</h2>
+                <p>HTML5、CSS3、JavaSpript、jQueryを使用し、ユー<br>
+                    ザーにとって見やすく、扱いやすいコーディングを行いま<br>
+                    す。また、動きのあるウェブサイトも対応可能です。</p>
+            </div>
+
+        </section>
+
+        <section class="works">
+            <div class="works_heading">
+                <h1>Works</h1>
+                <p>作品</p>
+            </div>
+            <div class="works_slider"></div>
+
+            <div class="more_btn"><a href="">もっと見る</a></div>
+        </section>
+
+        <section class="contact">
+            <div class="works_heading">
+                <h1>Contact</h1>
+                <p>お問い合わせ</p>
+            </div>
+
+            <p>お仕事のご依頼、ご相談、その他ご意見を受け付けております。<br>
+                下記のボタンからお問い合わせフォームへご記入ください。<br>
+                もしくは、各種SNS、メールアドレスからのご連絡も受け付けております。</p>
+
+            <div class="contact_btn">
+                <p>お問い合わせフォームへ</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_wrap">
+            <div class="sns_icon">
+                <img src="images/footer_x@2x.png" alt="X">
+                <img src="images/footer_inst@2x.png" alt="instagram">
+            </div>
+
+            <nav class="footer_nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="copyright"><small>©Honoka Yoshida 2023</small></div>
+    </footer>
+
+    <script>
+        $(function () {
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open')
+            });
+        });
+    </script>
 
 </body>
 
