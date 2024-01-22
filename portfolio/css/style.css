@@ -14,6 +14,7 @@
 
 .header_logo {
   width: 100px;
+  z-index: 90;
 }
 
 .pc_nav ul {
@@ -27,6 +28,7 @@
   text-align: center;
   font-family: "Arial";
   font-weight: 300;
+  z-index: 90;
 }
 
 .sp_nav,
@@ -129,20 +131,53 @@
 }
 
 .main_visual {
-  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .main_logo {
   width: 210px;
-  margin: 200px auto;
 }
 
 .main_logo img {
   width: 100%;
 }
 
-.scroll {
-  padding-left: 2%;
+.main_left_top {
+  position: absolute;
+  width: 60vw;
+  top: 0px;
+  left: 0px;
+}
+
+.main_right_top {
+  position: absolute;
+  width: 60vw;
+  top: 0px;
+  right: 0px;
+}
+
+.main_left_bottom {
+  position: absolute;
+  width: 60vw;
+  bottom: 0px;
+  left: 0px;
+}
+
+.main_right_bottom {
+  position: absolute;
+  width: 60vw;
+  bottom: 0px;
+  right: 0px;
+}
+
+.main_scroll {
+  position: absolute;
+  left: 28px;
+  bottom: 22%;
   width: 15px;
 }
 
@@ -159,6 +194,7 @@
 
 .concept_heading {
   text-align: center;
+  margin-bottom: 80px;
 }
 
 .concept_heading p {
@@ -166,15 +202,56 @@
 }
 
 .concept_text1 {
-  margin-top: 80px;
+  position: relative;
+  height: 360px;
+  width: 450px;
+  background-image: url(../images/Concept1@2x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.concept_text1 p {
+  position: absolute;
+  left: 20%;
+  top: 40%;
 }
 
 .concept_text2 {
-  margin-top: 80px;
+  position: relative;
+  left: 60%;
+  height: 360px;
+  width: 450px;
+  background-image: url(../images/Concept2@2x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.concept_text3 {
-  margin-top: 125px;
+.concept_text2 p {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+}
+
+.concept_text3 p {
+  text-align: center;
+  line-height: 2.3;
+}
+
+.more_btn {
+  position: relative;
+  left: 70%;
+  width: 200px;
+  height: 170px;
+  background-image: url(../images/more_button@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.more_btn a {
+  position: absolute;
+  left: 35%;
+  top: 46%;
+  font-size: 14px;
 }
 
 /* サービス */
@@ -186,10 +263,45 @@
 
 .service_heading {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .service_heading p {
   font-size: 12px;
+}
+
+.service_wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.service_design {
+  margin-right: 90px;
+  width: 50%;
+}
+
+.service_cording {
+  margin-left: 90px;
+  width: 50%;
+}
+
+.service_design img,
+.service_cording img {
+  width: 450px;
+}
+
+.service_design h2,
+.service_cording h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  padding: 35px 100px;
+  border-bottom: 2px solid #333;
+}
+
+.service_design p,
+.service_cording p {
+  text-align: left;
+  line-height: 2;
 }
 
 /* 作品 */
@@ -216,8 +328,17 @@
 
 .contact_heading {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .contact_heading p {
   font-size: 12px;
+}
+
+.contact_text {
+  text-align: center;
+}
+
+.contact_text p {
+  line-height: 2;
 }
