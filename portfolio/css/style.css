@@ -1,190 +1,5 @@
 @charset "utf-8";
 
-.header_wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 7% 0 3%;
-}
-
-.header_logo {
-  width: 100px;
-  z-index: 90;
-}
-
-.pc_nav ul {
-  display: flex;
-}
-
-.pc_nav ul li {
-  width: 40px;
-  margin-left: 160px;
-  font-size: 14px;
-  text-align: center;
-  font-family: "Arial";
-  font-weight: 300;
-  z-index: 90;
-}
-
-.sp_nav,
-.sp_btn {
-  display: none;
-}
-
-@media screen and (max-width: 1100px) {
-  .pc_nav {
-    display: none;
-  }
-
-  /* ハンバーガー */
-  .sp_btn {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    display: block;
-    height: 23px;
-    cursor: pointer;
-    z-index: 2;
-  }
-
-  .sp_btn span {
-    position: relative;
-    top: 10px;
-    display: block;
-    width: 33px;
-    height: 3px;
-    border-radius: 2px;
-    background-color: #333;
-    transition: 0.3s;
-  }
-
-  .sp_btn span::after,
-  .sp_btn span::before {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 33px;
-    height: 3px;
-    border-radius: 2px;
-    background-color: #333;
-    transition: 0.3s;
-  }
-
-  .sp_btn span::before {
-    bottom: 10px;
-  }
-
-  .sp_btn span::after {
-    top: 10px;
-  }
-
-  /* ハンバーガー閉じ */
-  .sp_btn.open span {
-    background: transparent;
-  }
-
-  .sp_btn.open span::before {
-    bottom: 0px;
-    transform: rotate(45deg);
-  }
-
-  .sp_btn.open span::after {
-    top: 0px;
-    transform: rotate(135deg);
-  }
-
-  /* ハンバーガーメニュー */
-  .sp_nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(249, 236, 217, 1);
-    z-index: 1;
-  }
-
-  .sp_nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-
-  .sp_nav ul li {
-    padding: 20px;
-    color: #333;
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .header_logo {
-    width: 60px;
-  }
-}
-
-.main_visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.main_logo {
-  width: 210px;
-}
-
-.main_logo img {
-  width: 100%;
-}
-
-.main_left_top {
-  position: absolute;
-  width: 60vw;
-  top: 0px;
-  left: 0px;
-}
-
-.main_right_top {
-  position: absolute;
-  width: 60vw;
-  top: 0px;
-  right: 0px;
-}
-
-.main_left_bottom {
-  position: absolute;
-  width: 60vw;
-  bottom: 0px;
-  left: 0px;
-}
-
-.main_right_bottom {
-  position: absolute;
-  width: 60vw;
-  bottom: 0px;
-  right: 0px;
-}
-
-.main_scroll {
-  position: absolute;
-  left: 28px;
-  bottom: 22%;
-  width: 15px;
-}
-
-.scroll img {
-  width: 100%;
-}
-
 /* コンセプト */
 .concept {
   margin: 0 auto;
@@ -203,6 +18,7 @@
 
 .concept_text1 {
   position: relative;
+  margin-top: -50px;
   height: 360px;
   width: 450px;
   background-image: url(../images/Concept1@2x.png);
@@ -218,8 +34,10 @@
 
 .concept_text2 {
   position: relative;
-  left: 60%;
-  height: 360px;
+  margin-top: -150px;
+  margin-left: auto;
+  margin-bottom: -50px;
+  height: 270px;
   width: 450px;
   background-image: url(../images/Concept2@2x.png);
   background-size: contain;
@@ -229,7 +47,7 @@
 .concept_text2 p {
   position: absolute;
   left: 10%;
-  top: 30%;
+  top: 40%;
 }
 
 .concept_text3 p {
@@ -341,4 +159,28 @@
 
 .contact_text p {
   line-height: 2;
+}
+
+.contact_btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px auto 0px auto;
+  width: 300px;
+  height: 130px;
+  background-image: url(../images/contact_button@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 83px;
+}
+
+.contact_btn p {
+  position: absolute;
+  top: 75px;
+  font-size: 14px;
+}
+
+.thanks_message {
+  margin-top: 135px;
 }
