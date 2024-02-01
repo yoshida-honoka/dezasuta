@@ -72,6 +72,47 @@
   font-size: 14px;
 }
 
+.sp_br {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .concept {
+    max-width: 375px;
+  }
+  .concept_text1 {
+    margin: 0 auto -120px auto;
+    width: 300px;
+    font-size: 14px;
+  }
+
+  .concept_text1 p {
+    left: 30%;
+    top: 20%;
+    line-height: 1.75;
+  }
+
+  .concept_text2 {
+    margin: 50px auto -40px auto;
+    width: 300px;
+    font-size: 14px;
+  }
+
+  .concept_text2 p {
+    left: 18%;
+    top: 18%;
+    line-height: 1.75;
+  }
+
+  .more_btn {
+    left: 50%;
+  }
+
+  .sp_br {
+    display: block;
+  }
+}
+
 /* サービス */
 .service {
   margin: 0 auto;
@@ -108,8 +149,8 @@
   width: 450px;
 }
 
-.service_design h2,
-.service_cording h2 {
+.service_design h3,
+.service_cording h3 {
   text-align: center;
   margin-bottom: 35px;
   padding: 35px 100px;
@@ -122,6 +163,59 @@
   line-height: 2;
 }
 
+@media screen and (max-width: 850px) {
+  .service {
+    max-width: 375px;
+  }
+
+  .service_wrap {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .service_design,
+  .service_cording {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .service_design img,
+  .service_cording img {
+    width: 200px;
+  }
+
+  .service_design h3,
+  .service_cording h3 {
+    text-align: center;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 2px solid #333;
+  }
+
+  .service_design h3 {
+    padding: 35px 140px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .service_cording h3 {
+    padding: 35px 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .service_design p,
+  .service_cording p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 /* 作品 */
 .works {
   margin: 0 auto;
@@ -131,10 +225,61 @@
 
 .works_heading {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .works_heading p {
   font-size: 12px;
+}
+
+.gallery_wrap {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.slick-prev {
+  left: 10px;
+  z-index: 1;
+}
+
+.slick-prev:before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(225deg);
+}
+
+.slick-next {
+  right: 10px;
+  z-index: 1;
+}
+
+.slick-next:before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(45deg);
+}
+
+.lb-data .lb-number {
+  display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  .works {
+    max-width: 375px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 /* お問い合わせ */
@@ -166,7 +311,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 80px auto 0px auto;
+  margin: 0 auto;
   width: 300px;
   height: 130px;
   background-image: url(../images/contact_button@2x.png);
@@ -178,9 +323,6 @@
 .contact_btn p {
   position: absolute;
   top: 75px;
+  margin-left: -68px;
   font-size: 14px;
-}
-
-.thanks_message {
-  margin-top: 135px;
 }

@@ -1,0 +1,103 @@
+.contact_heading {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_heading p {
+  padding-top: 15px;
+}
+
+.contact_form label {
+  display: block;
+  width: 600px;
+  margin: 0 auto 25px auto;
+  font-size: 14px;
+}
+
+.contact_form input {
+  display: block;
+  width: 600px;
+  margin: 0 auto 62px auto;
+}
+
+.contact_form textarea {
+  display: block;
+  width: 600px;
+  height: 300px;
+  margin: 0 auto 62px auto;
+}
+
+#name {
+  height: 20px;
+}
+
+.send_btn {
+  background-image: url(../images/send_button@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 83px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 300px;
+  height: 130px;
+  margin-bottom: 100px;
+}
+
+.send_btn button {
+  opacity: 0;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 43px 115px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.send_btn a {
+  position: absolute;
+  top: 75px;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.thanks_message {
+  max-width: 488px;
+  margin: 135px auto 0px auto;
+}
+
+.thanks_message h1 {
+  margin-bottom: 75px;
+  text-align: center;
+}
+
+.thanks_message p {
+  line-height: 2;
+  margin-bottom: 56px;
+}
+
+.thanks_btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 300px;
+  height: 130px;
+  background-image: url(../images/send_button@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 83px;
+}
+
+.thanks_btn p {
+  position: absolute;
+  top: 75px;
+  margin-left: -55px;
+  font-size: 14px;
+}

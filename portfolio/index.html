@@ -16,9 +16,9 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="header_wrap">
-            <div class="header_logo"><a href="">
+            <div class="header_logo"><a href="#header">
                     <picture>
                         <source srcset="images/logo_sp@2x.png" media="(max-width: 767px)"><img
                             src="images/logo_pc@2x.png" alt="mokumoku design">
@@ -27,17 +27,17 @@
             </div>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./about/index.html">About</a></li>
+                    <li><a href="./works/index.html">Works</a></li>
+                    <li><a href="./contact/index.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="sp_btn"><span></span></div>
             <nav class="sp_nav">
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./about/index.html">About</a></li>
+                    <li><a href="./works/index.html">Works</a></li>
+                    <li><a href="./contact/index.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,18 +61,18 @@
             </div>
 
             <div class="concept_text1">
-                <p>もっとかっこいいデザインのサイトにしたい……</p>
+                <p>もっとかっこいいデザイン<br class="sp_br">のサイトにしたい……</p>
             </div>
             <div class="concept_text2">
-                <p>お客様の目を引く広告を作りたい……</p>
+                <p>お客様の目を引く<br class="sp_br">広告を作りたい……</p>
             </div>
             <div class="concept_text3">
-                <p>心の中の、もくもくとした吹き出しに入っているイメージを、<br>
-                    目に見える形で、多くの人に伝わるように、形にすること。<br>
+                <p>心の中の、<br class="sp_br">もくもくとした吹き出しに<br class="sp_br">入っているイメージを、<br>
+                    目に見える形で、<br class="sp_br">多くの人に伝わるように、<br class="sp_br">形にすること。<br>
                     それが私の仕事です。</p>
             </div>
 
-            <div class="more_btn"><a href="">もっと見る</a></div>
+            <div class="more_btn"><a href="./about/index.html">もっと見る</a></div>
         </section>
 
         <section class="service">
@@ -105,9 +105,25 @@
                 <h2 class="heading">Works</h2>
                 <p>作品</p>
             </div>
-            <div class="works_slider"></div>
-
-            <div class="more_btn"><a href="">もっと見る</a></div>
+            <div class="works_slider">
+                <div class="gallery_wrap">
+                    <a href="images/works_slider1@2x.png" data-lightbox="group"><img src="images/works_slider1@2x.png"
+                            alt="SPRING SALE(セール広告)"></a>
+                    <a href="images/works_slider2@2x.png" data-lightbox="group"><img src="images/works_slider2@2x.png"
+                            alt="TRRRRIP(アプリ広告)"></a>
+                    <a href="images/works_slider3@2x.png" data-lightbox="group"><img src="images/works_slider3@2x.png"
+                            alt="極旨バーガー(高級 ver.)"></a>
+                    <a href="images/works_slider4@2x.png" data-lightbox="group"><img src="images/works_slider4@2x.png"
+                            alt="極旨バーガー(pop ver.)"></a>
+                    <a href="images/works_slider5@2x.png" data-lightbox="group"><img src="images/works_slider5@2x.png"
+                            alt="コワーキングスペースサイト"></a>
+                    <a href="images/works_slider6@2x.png" data-lightbox="group"><img src="images/works_slider6@2x.png"
+                            alt="美容室LP"></a>
+                    <a href="images/works_slider7@2x.png" data-lightbox="group"><img src="images/works_slider7@2x.png"
+                            alt="カフェサイト"></a>
+                </div>
+            </div>
+            <div class="more_btn"><a href="./works/index.html">もっと見る</a></div>
         </section>
 
         <section class="contact">
@@ -117,31 +133,35 @@
             </div>
 
             <div class="contact_text">
-                <p>お仕事のご依頼、ご相談、その他ご意見を受け付けております。<br>
-                    下記のボタンからお問い合わせフォームへご記入ください。<br>
-                    もしくは、各種SNS、メールアドレスからのご連絡も受け付けております。</p>
+                <p>お仕事のご依頼、ご相談、<br class="sp_br">その他ご意見を受け付けております。<br>
+                    下記のボタンからお問い合わせフォームへ<br class="sp_br">ご記入ください。<br>
+                    もしくは、各種SNS、メールアドレスからの<br class="sp_br">ご連絡も受け付けております。</p>
             </div>
 
             <div class="contact_btn">
-                <p>お問い合わせフォームへ</p>
+                <a href="">
+                    <p>お問い合わせフォームへ</p>
+                </a>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer_wrap">
-            <div class="x_icon">
-                <a href=""><img src="images/footer_x@2x.png" alt="X"></a>
-            </div>
-            <div class="instagram_icon">
-                <a href=""><img src="images/footer_inst@2x.png" alt="instagram"></a>
+            <div class="icon_wrap">
+                <div class="x_icon">
+                    <a href=""><img src="./images/footer_x@2x.png" alt="X"></a>
+                </div>
+                <div class="instagram_icon">
+                    <a href=""><img src="./images/footer_inst@2x.png" alt="instagram"></a>
+                </div>
             </div>
 
             <nav class="footer_nav">
                 <ul class="footer_nav_flex">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./about/index.html">About</a></li>
+                    <li><a href="./works/index.html">Works</a></li>
+                    <li><a href="./contact/index.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
