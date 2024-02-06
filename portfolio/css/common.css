@@ -56,10 +56,12 @@ img {
 }
 
 .heading {
-  font-family: "santelia rough two", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 28px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.heading img {
+  width: 100%;
 }
 
 /* ヘッダー */
@@ -244,8 +246,31 @@ img {
   width: 15px;
 }
 
-.scroll img {
+.main_scroll img {
   width: 100%;
+  animation-name: UpDown;
+  /* アニメーションの１回分の長さ */
+  animation-duration: 1.5s;
+  /* アニメーションの回数 */
+  animation-iteration-count: infinite;
+  /* アニメーションの進行具合 */
+  animation-timing-function: ease-in-out;
+  /* アニメーション再生の向き */
+  animation-direction: alternate;
+}
+
+/* アニメーションの設定 */
+@keyframes UpDown {
+  /* 開始地点 */
+  0% {
+    /* Y軸0px */
+    transform: translateY(0);
+  }
+  /* 終了地点 */
+  100% {
+    /* Y軸50px */
+    transform: translateY(30px);
+  }
 }
 
 /* フッター */
@@ -335,12 +360,36 @@ footer {
   }
 
   .footer_nav_flex {
-    justify-content: center;
-    margin: 0 auto;
+    justify-content: space-evenly;
   }
 
   .footer_nav_flex li {
     width: 50px;
-    margin: 0 auto;
+    margin: 0;
   }
+
+  .footer_nav_flex li:last-child {
+    margin-right: 0px;
+  }
+}
+
+/* フェードイン用のCSS */
+.slide-bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.2s 0s ease-out;
+}
+
+/* 左からフェードイン */
+.slide-left {
+  opacity: 0;
+  transform: translate(-20px, 0);
+  transition: all 1s ease-out;
+}
+
+/* 右からフェードイン */
+.slide-right {
+  opacity: 0;
+  transform: translate(20px, 0);
+  transition: all 1s ease-out;
 }
